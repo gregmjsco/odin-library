@@ -1,4 +1,6 @@
-let myLibrary = [];
+"use strict";
+
+var myLibrary = [];
 
 function Book(title, author, pages, read) {
   // the constructor...
@@ -7,11 +9,16 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
   this.info = function(){
-    let info = `${title} by ${author}, ${pages}, ${read}`
-    return info
+    var info = `${title} by ${author}, ${pages}, ${read}`
+    return info;
   }
 
 }
+
+const theHobbit = new Book("The Hobbit", "Tolkien", 750, "Not yet read")
+
+theHobbit.info()
+console.log(theHobbit.info())
 
 function addBookToLibrary() {
   // do stuff here
