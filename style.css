@@ -1,5 +1,5 @@
 body {
-    flex: auto;
+
 }
 
 .top {
@@ -7,6 +7,10 @@ body {
 }
 
 .left-sec {
-    flex: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
     background-color: lightskyblue;
 }
