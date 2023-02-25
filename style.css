@@ -1,4 +1,12 @@
 body {
     flex: auto;
-    background-color: bisque;
+}
+
+.top {
+    background-color: deepskyblue;
+}
+
+.left-sec {
+    flex: 1;
+    background-color: lightskyblue;
 }
