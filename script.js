@@ -1,4 +1,6 @@
-"use strict";
+
+
+console.log("Hello");
 
 var myLibrary = [];
 
@@ -15,11 +17,13 @@ function Book(title, author, pages, read) {
 
 }
 
-const theHobbit = new Book("The Hobbit", "Tolkien", 750, "Not yet read")
-
-theHobbit.info()
-console.log(theHobbit.info())
-
 function addBookToLibrary() {
   // do stuff here
 }
+
+let newBookBtn = document.querySelector("#add-book-btn");
+newBookBtn.addEventListener("click", function(){
+  let newBookForm = document.querySelector("#new-book-form");
+  console.log(newBookForm);
+  newBookForm.style.display = "block";
+})
