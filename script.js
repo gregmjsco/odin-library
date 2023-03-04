@@ -12,6 +12,28 @@ function Book(title, author, pages, read) {
   this.read = read;
   }
 
+  function render(){
+    let libraryEl = document.querySelector("#library"); 
+    libraryEl.innerHTML = "";
+    for (let index = 0; index < myLibrary.length; index++) {
+      let book = myLibrary[index];
+      let bookEl = document.createElement("div");
+      bookEl.setAttribute("class", "book-card")
+      bookEl.innerHTML = `
+      <div class = "card header">
+        <h3 class = "title">${book.title}</h3>
+        <h5 class = "author">by ${book.author}</h5>
+      </div>
+      <div class ="card-body"
+        <p>${book.pages} pages</p>
+        <p class="read-status">${book.read ? "Read" : "Not Read Yet"}</p>`;
+      libraryEl.appendChild(bookEl);
+
+
+      
+    }
+  }
+
 function addBookToLibrary() {
   // do stuff here
   let title = document.querySelector("#title").value;
@@ -20,8 +42,8 @@ function addBookToLibrary() {
   let read = document.querySelector("#read").checked;
 
   let newBook = new Book(title, author, pages, read);
-  console.log(newBook);
-
+  myLibrary.push(newBook)
+  render();
 }
 
 let newBookBtn = document.querySelector("#add-book-btn");
@@ -33,5 +55,5 @@ newBookBtn.addEventListener("click", function(){
 
 document.querySelector("#new-book-form").addEventListener("submit", function(event) {
   event.preventDefault()
-  addBookToLibrary()
+  addBookToLibrary()  
 })
