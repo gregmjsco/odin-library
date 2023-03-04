@@ -14,3 +14,15 @@ body {
     width: 300px;
     background-color: lightskyblue;
 }
+
+
+.book-card {
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
