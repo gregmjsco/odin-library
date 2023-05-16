@@ -55,7 +55,7 @@ function addBookToLibrary() {
   let read = document.querySelector("#read").checked;
 
   let newBook = new Book(title, author, pages, read);
-  myLibrary.push(newBook)
+  myLibrary.push(newBook);
   render();
 }
 
@@ -64,7 +64,7 @@ newBookBtn.addEventListener("click", function(){
   let newBookForm = document.querySelector("#new-book-form");
   console.log(newBookForm);
   newBookForm.style.display = "block";
-})
+});
 
 function removeBook(index){
   myLibrary.splice(index, 1);
@@ -72,6 +72,6 @@ function removeBook(index){
 }
 
 document.querySelector("#new-book-form").addEventListener("submit", function(event) {
-  event.preventDefault()
-  addBookToLibrary()  
-})
+  event.preventDefault();
+  addBookToLibrary();  
+});
